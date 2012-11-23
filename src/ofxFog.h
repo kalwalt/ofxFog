@@ -23,12 +23,42 @@ public:
     ofxFog();
     virtual ~ofxFog();
 
-	void settings(int fogMode, ofFloatColor fogColor, float density, float fog_start, float fog_end );
+//	void settings(int fogMode, ofFloatColor fogColor, float density, float fog_start, float fog_end );
+
+
+	void setup();
+
+	///setter
+
+	void setfogColor(ofFloatColor fogColor);
+	void setFogMode(int fogMode);
+	void setDensity(float density);
+	void setFogStartEnd( float fog_start, float fog_end );
 
 	bool enableCoordinate(bool enable);
 
 	bool enable(bool enable);
- 	bool disable(bool diable);
+ 	bool disable(bool disable);
+
+ 	///getters
+
+ 	ofFloatColor getfogColor();
+	int getFogMode();
+	float getDensity();
+	float getFogStart();
+    float getFogEnd();
+
+
+private:
+
+ 	int _fogMode;
+    ofFloatColor _fogColor;
+    //float fogCol[4];
+    float _density;
+    float _fog_start;
+    float _fog_end;
+
+
 
 
 

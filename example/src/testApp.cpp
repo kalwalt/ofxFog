@@ -34,7 +34,7 @@ void testApp::setup(){
 
 
     bHide = true;
-
+    fog.setup();
 
 
 
@@ -45,7 +45,12 @@ void testApp::update(){
 
     fogColor.set(r,g,b) ;//= {r,g,b,1.0f};   // Fog Color
 
-    fog.settings(fogFilter,fogColor,density,fog_start,fog_end);
+    //fog.settings(fogFilter,fogColor,density,fog_start,fog_end);
+
+    fog.setfogColor(fogColor);
+    fog.setFogMode(fogFilter);
+    fog.setDensity(density);
+    fog.setFogStartEnd(fog_start,fog_end);
     fog.enableCoordinate(true);
     fog.enable(true);
 
