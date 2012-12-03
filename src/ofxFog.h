@@ -51,12 +51,12 @@ public:
 
 private:
 
- 	int _fogMode;
-    ofFloatColor _fogColor;
+ 	int m_fogMode;
+    ofFloatColor m_fogColor;
     //float fogCol[4];
-    float _density;
-    float _fog_start;
-    float _fog_end;
+    float m_density;
+    float m_fog_start;
+    float m_fog_end;
 
 
 
