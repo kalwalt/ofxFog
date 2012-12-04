@@ -11,13 +11,14 @@ How to use
 
 in testApp.h:
 
-#include "ofxFog.h"
 
 ofxFog fog;
+
 ofFloatColor fogColor;
 
 
 in testApp.cpp:
+
 
 in void setup():
 
