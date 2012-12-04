@@ -88,21 +88,21 @@ bool ofxFog::enableCoordinate(bool enable){
 
         m_enableFogCoordinate = true;
 
-
+        return true;
 
     }else if(!enable){
 
         m_enableFogCoordinate = false;
 
-
+        return false;
     }
 
 
-    return true;
+    //return true;
 
 }
 
-bool ofxFog::enable(bool enable){
+bool ofxFog::enable(){
 
     glEnable(GL_FOG);
 
@@ -110,7 +110,7 @@ bool ofxFog::enable(bool enable){
 
 }
 
-bool ofxFog::disable(bool disable){
+bool ofxFog::disable(){
 
     glDisable(GL_FOG);
 

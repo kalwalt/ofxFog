@@ -45,14 +45,13 @@ void testApp::update(){
 
     fogColor.set(r,g,b) ;//= {r,g,b,1.0f};   // Fog Color
 
-    //fog.settings(fogFilter,fogColor,density,fog_start,fog_end);
 
     fog.setfogColor(fogColor);
     fog.setFogMode(fogFilter);
     fog.setDensity(density);
     fog.setFogStartEnd(fog_start,fog_end);
     fog.enableCoordinate(true);
-    fog.enable(true);
+    fog.enable();
 
 }
 
@@ -92,10 +91,13 @@ void testApp::draw(){
 
     if( bHide ){
 
-        fog.disable(true);
+        fog.disable();
 		gui.draw();
 
     }
+
+    ofSetColor(220,10,0);
+    ofDrawBitmapString("I'm a string not coloured by the fog!", 10,720);
 
     }
 

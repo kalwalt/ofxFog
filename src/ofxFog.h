@@ -35,8 +35,8 @@ public:
 
 	bool enableCoordinate(bool enable);
 
-	bool enable(bool enable);
- 	bool disable(bool disable);
+	bool enable();
+ 	bool disable();
 
  	///getters
 
