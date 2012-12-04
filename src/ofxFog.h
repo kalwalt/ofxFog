@@ -23,8 +23,6 @@ public:
     ofxFog();
     virtual ~ofxFog();
 
-//	void settings(int fogMode, ofFloatColor fogColor, float density, float fog_start, float fog_end );
-
 
 	void setup();
 
@@ -57,9 +55,7 @@ private:
     float m_density;
     float m_fog_start;
     float m_fog_end;
-
-
-
+    bool m_enableFogCoordinate;
 
 
 };

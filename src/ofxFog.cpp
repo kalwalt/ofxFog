@@ -12,6 +12,7 @@ ofxFog::ofxFog(){
     m_density = 0.0035f;
     m_fog_start = 10.0f;
     m_fog_end = 150.0f;
+    m_enableFogCoordinate = true;
 
 }
 
@@ -30,6 +31,19 @@ void ofxFog::setup(){
     glHint(GL_FOG_HINT, GL_DONT_CARE);             // Fog Hint Value
     glFogf(GL_FOG_START, m_fog_start);                    // Fog Start Depth
     glFogf(GL_FOG_END, m_fog_end);                      // Fog End Depth
+
+    //enable fog coord
+    if(m_enableFogCoordinate){
+
+        glFogi(GL_FOG_COORD_SRC, GL_FOG_COORDINATE);
+
+    // or enable fog fragment depth
+    }else if(!m_enableFogCoordinate){
+
+        glFogi(GL_FOG_COORD_SRC, GL_FRAGMENT_DEPTH);
+
+
+    }
 
 
 }
@@ -72,12 +86,13 @@ bool ofxFog::enableCoordinate(bool enable){
 
     if(enable){
 
-        glFogi(GL_FOG_COORD_SRC, GL_FOG_COORDINATE);
+        m_enableFogCoordinate = true;
+
 
 
     }else if(!enable){
 
-        glFogi(GL_FOG_COORD_SRC, GL_FRAGMENT_DEPTH);
+        m_enableFogCoordinate = false;
 
 
     }
