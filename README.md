@@ -36,11 +36,11 @@ fog.setfogColor(fogColor);
 
 in void draw():
 
-fog.enable(true);
+fog.enable();
 
 ofBox(10);
 
-fog.disable(true);
+fog.disable();
 
 ofDrawBitmapString("I'm a string not coloured by the fog!", 10,720);
 
