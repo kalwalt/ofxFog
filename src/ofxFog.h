@@ -9,9 +9,9 @@
 
 class ofxFog {
 
-public:
+	public:
 
-    enum fogMode{
+    	enum fogMode{
 
 
                 OF_FOG_EXP = 0,
@@ -20,8 +20,8 @@ public:
 
                 };
 
-    ofxFog();
-    virtual ~ofxFog();
+    	ofxFog();
+   	virtual ~ofxFog();
 
 
 	void setup();
@@ -44,18 +44,18 @@ public:
 	int getFogMode();
 	float getDensity();
 	float getFogStart();
-    float getFogEnd();
+    	float getFogEnd();
 
 
-private:
+	private:
 
  	int m_fogMode;
-    ofFloatColor m_fogColor;
-    //float fogCol[4];
-    float m_density;
-    float m_fog_start;
-    float m_fog_end;
-    bool m_enableFogCoordinate;
+    	ofFloatColor m_fogColor;
+    	//float fogCol[4];
+    	float m_density;
+    	float m_fog_start;
+    	float m_fog_end;
+    	bool m_enableFogCoordinate;
 
 
 };
