@@ -11,7 +11,7 @@ class ofxFog {
 
 	public:
 
-    	enum fogMode{
+    		enum fogMode{
 
 
                 OF_FOG_EXP = 0,
@@ -20,42 +20,42 @@ class ofxFog {
 
                 };
 
-    	ofxFog();
-   	virtual ~ofxFog();
+    		ofxFog();
+   		virtual ~ofxFog();
 
 
-	void setup();
+		void setup();
 
-	///setter
+		///setter
 
-	void setfogColor(ofFloatColor fogColor);
-	void setFogMode(int fogMode);
-	void setDensity(float density);
-	void setFogStartEnd( float fog_start, float fog_end );
+		void setfogColor(ofFloatColor fogColor);
+		void setFogMode(int fogMode);
+		void setDensity(float density);
+		void setFogStartEnd( float fog_start, float fog_end );
 
-	bool enableCoordinate(bool enable);
+		bool enableCoordinate(bool enable);
 
-	bool enable();
- 	bool disable();
+		bool enable();
+ 		bool disable();
 
- 	///getters
+ 		///getters
 
- 	ofFloatColor getfogColor();
-	int getFogMode();
-	float getDensity();
-	float getFogStart();
-    	float getFogEnd();
+ 		ofFloatColor getfogColor();
+		int getFogMode();
+		float getDensity();
+		float getFogStart();
+    		float getFogEnd();
 
 
 	private:
 
- 	int m_fogMode;
-    	ofFloatColor m_fogColor;
-    	//float fogCol[4];
-    	float m_density;
-    	float m_fog_start;
-    	float m_fog_end;
-    	bool m_enableFogCoordinate;
+ 		int m_fogMode;
+    		ofFloatColor m_fogColor;
+    		//float fogCol[4];
+    		float m_density;
+    		float m_fog_start;
+    		float m_fog_end;
+    		bool m_enableFogCoordinate;
 
 
 };
