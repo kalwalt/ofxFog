@@ -13,7 +13,6 @@ class ofxFog {
 
     		enum fogMode{
 
-
                 OF_FOG_EXP = 0,
                 OF_FOG_EXP2 = 1,
                 OF_FOG_LINEAR = 2
